@@ -12,9 +12,9 @@ public class WoodDirectory {
 
     //init block
     {
-        arr[0] = new Wood(1, "Модрина", 1.1f);
-        arr[1] = new Wood(2, "Ялина", 0.9f);
-        arr[2] = new Wood(3, "Сосна", 0.7f);
+        arr[0] = new Wood(0, "Модрина", 1.1f);
+        arr[1] = new Wood(1, "Ялина", 0.9f);
+        arr[2] = new Wood(2, "Сосна", 0.7f);
         count = 3;
     }
 
@@ -36,7 +36,6 @@ public class WoodDirectory {
 
     public boolean add(Wood newWood) {
         //check for uniqueness
-        System.exit(0);
         if (get(newWood.getId()) != null)
             return false;
         //preventing array overflow

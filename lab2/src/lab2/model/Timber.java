@@ -1,6 +1,6 @@
 package lab2.model;
 
-public class Timber {
+public class Timber implements IForm {
 
     private Wood wood;
     private float length;
@@ -46,10 +46,12 @@ public class Timber {
         this.width = width;
     }
 
+    @Override
     public float volume() {
         return length * width * height;
     }
 
+    @Override
     public float weight() {
         return wood.getDensity() * volume();
     }
@@ -58,7 +60,10 @@ public class Timber {
     public String toString() {
         return "Timber{" +
                 "wood=" + wood +
+                ", length=" + length +
                 ", height=" + height +
+                ", width=" + width +
+                ",weight=" + weight() +
                 '}';
     }
 }
