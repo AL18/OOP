@@ -1,20 +1,18 @@
-package lab2.model;
+package lab3.model;
 
-import lab3.model.Wood;
-
-public class Cylinder implements IForm {
+public class Cylinder extends AbstractForm{
 
     private lab3.model.Wood wood;
     private float length;
     private float radius;
 
     public Cylinder(lab3.model.Wood wood, float length, float radius) {
-        this.wood = wood;
+        super(wood);
         this.length = length;
         this.radius = radius;
     }
 
-    public Wood getWood() {
+    public lab3.model.Wood getWood() {
         return wood;
     }
 
@@ -28,11 +26,6 @@ public class Cylinder implements IForm {
 
     @Override
     public float volume() { return (float)(Math.PI * length * Math.pow(radius, 2)); }
-
-    @Override
-    public float weight() {
-        return wood.getDensity() * volume();
-    }
 
     @Override
     public String toString() {

@@ -1,10 +1,11 @@
-package lab2;
+package lab3;
 
-import lab2.model.Cylinder;
-import lab2.model.IForm;
-import lab2.store.ProductStore;
-import lab2.store.WoodDirectory;
-import lab2.model.Timber;
+import lab3.model.Cylinder;
+import lab3.model.IWeight;
+import lab3.model.Timber;
+import lab3.model.Waste;
+import lab3.store.ProductStore;
+import lab3.store.WoodDirectory;
 
 public class TestApp {
 
@@ -14,7 +15,7 @@ public class TestApp {
     private ProductStore ps = new ProductStore();
 
     public static void main(String[] args) {
-        lab2.TestApp app = new lab2.TestApp();
+        TestApp app = new TestApp();
         app.startApp();
     }
 
@@ -23,7 +24,8 @@ public class TestApp {
         ps.add(new Timber(wd.get(0), 5f, 0.5f, 0.4f));
         ps.add(new Timber(wd.get(1), 10f, 0.5f, 0.4f));
         ps.add(new Cylinder(wd.get(2), 5f, 0.3f));
-
+        ps.add(new Cylinder(wd.get(1), 10f, 0.5f));
+        ps.add(new Waste(20f));
         //printing items list
         System.out.println(wd);
         System.out.println(ps);
@@ -33,7 +35,7 @@ public class TestApp {
 
     private float calcWeight() {
         float fullWeight = 0;
-        for (IForm item: ps.getArr()) {
+        for (IWeight item: ps.getArr()) {
             fullWeight += item.weight();
         }
         return fullWeight;

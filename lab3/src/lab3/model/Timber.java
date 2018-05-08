@@ -1,23 +1,16 @@
-package lab2.model;
+package lab3.model;
 
-import lab3.model.Wood;
+public class Timber extends AbstractForm {
 
-public class Timber implements IForm {
-
-    private lab3.model.Wood wood;
     private float length;
     private float height;
     private float width;
 
-    public Timber(lab3.model.Wood wood, float length, float height, float width) {
-        this.wood = wood;
+    public Timber(Wood wood, float length, float height, float width) {
+        super(wood);
         this.length = length;
         this.height = height;
         this.width = width;
-    }
-
-    public lab3.model.Wood getWood() {
-        return wood;
     }
 
     public void setWood(Wood wood) {
@@ -51,11 +44,6 @@ public class Timber implements IForm {
     @Override
     public float volume() {
         return length * width * height;
-    }
-
-    @Override
-    public float weight() {
-        return wood.getDensity() * volume();
     }
 
     @Override

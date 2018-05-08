@@ -1,15 +1,15 @@
-package lab2.store;
+package lab3.store;
 
-import lab2.model.IForm;
+import lab3.model.IWeight;
 
 import java.util.Arrays;
 
 public class ProductStore {
 
-    private IForm[] arr = new IForm[3];
+    private IWeight[] arr = new IWeight[3];
     private int count = 0;
 
-    public IForm[] getArr() {
+    public IWeight[] getArr() {
         return Arrays.copyOf(arr, count);
     }
 
@@ -17,7 +17,7 @@ public class ProductStore {
         return count;
     }
 
-    public void add(IForm newItem) {
+    public void add(IWeight newItem) {
 
         //preventing array overflow
         if (arr.length == count)
@@ -25,7 +25,6 @@ public class ProductStore {
         //adding new element
         arr[count++] = newItem;
     }
-
 
     @Override
     public String toString() {

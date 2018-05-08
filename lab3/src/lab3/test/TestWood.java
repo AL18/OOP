@@ -1,4 +1,4 @@
-package lab2.test;
+package lab3.test;
 
 import lab3.model.Wood;
 import lab3.store.WoodDirectory;
