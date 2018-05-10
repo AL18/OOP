@@ -1,9 +1,6 @@
 package lab3;
 
-import lab3.model.Cylinder;
-import lab3.model.IWeight;
-import lab3.model.Timber;
-import lab3.model.Waste;
+import lab3.model.*;
 import lab3.store.ProductStore;
 import lab3.store.WoodDirectory;
 
@@ -24,7 +21,7 @@ public class TestApp {
         ps.add(new Timber(wd.get(0), 5f, 0.5f, 0.4f));
         ps.add(new Timber(wd.get(1), 10f, 0.5f, 0.4f));
         ps.add(new Cylinder(wd.get(2), 5f, 0.3f));
-        ps.add(new Cylinder(wd.get(1), 10f, 0.5f));
+        ps.add(new Triangle(wd.get(1), 10f, 0.5f));
         ps.add(new Waste(20f));
         //printing items list
         System.out.println(wd);

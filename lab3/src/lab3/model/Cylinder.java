@@ -2,7 +2,6 @@ package lab3.model;
 
 public class Cylinder extends AbstractForm{
 
-    private lab3.model.Wood wood;
     private float length;
     private float radius;
 
@@ -12,8 +11,8 @@ public class Cylinder extends AbstractForm{
         this.radius = radius;
     }
 
-    public lab3.model.Wood getWood() {
-        return wood;
+    public void setWood(Wood wood) {
+        this.wood = wood;
     }
 
     public float getLength() {
@@ -33,7 +32,7 @@ public class Cylinder extends AbstractForm{
                 "wood=" + wood +
                 ", length=" + length +
                 ", radius=" + radius +
-                ",weight=" + weight() +
+                ", weight=" + weight() +
                 '}';
     }
 }
